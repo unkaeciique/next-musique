@@ -2,12 +2,12 @@ import Image from "next/image";
 import SidebarItem from "./SidebarItem";
 import images from "@/assets/images/images";
 import {
-  PiNewspaperClippingBold,
-  PiChatsTeardropFill,
-  PiSpeakerHifiBold,
-  PiBellSimpleBold,
-  PiHeartBold,
-} from "react-icons/pi";
+  TbHearts,
+  TbNavigationQuestion,
+  TbNotification,
+  TbDeviceSpeaker,
+  TbMessages,
+} from "react-icons/tb";
 import "./Sidebar.scss";
 
 export default function Sidebar() {
@@ -23,11 +23,11 @@ export default function Sidebar() {
       </div>
 
       <div className="mt-4 mb-2.5 xl:items-start">
-        <SidebarItem text="Feed" Icon={PiNewspaperClippingBold} active />
-        <SidebarItem text="Gossips" Icon={PiChatsTeardropFill} />
-        <SidebarItem text="Hollerspace" Icon={PiSpeakerHifiBold} />
-        <SidebarItem text="Liked Posts" Icon={PiHeartBold} />
-        <SidebarItem text="Notifications" Icon={PiBellSimpleBold} />
+        <SidebarItem text="Feed" Icon={TbNavigationQuestion} active />
+        <SidebarItem text="Gossips" Icon={TbMessages} />
+        <SidebarItem text="Hollerspace" Icon={TbDeviceSpeaker} />
+        <SidebarItem text="Liked Posts" Icon={TbHearts} />
+        <SidebarItem text="Notifications" Icon={TbNotification} />
       </div>
 
       <button className="bg-blue-400 create-button text-white rounded-md w-56 h-12 font-bold shadow-md hover:brightness-95 text-lg hidden xl:inline">

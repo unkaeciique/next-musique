@@ -1,4 +1,5 @@
 import { PiSparkleBold } from "react-icons/pi";
+import InputPost from "./InputPost";
 
 export default function Feed() {
   return (
@@ -11,6 +12,7 @@ export default function Feed() {
           <PiSparkleBold className="h-5" fill="black" />
         </div>
       </div>
+      <InputPost />
     </div>
   );
 }
