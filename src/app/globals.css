@@ -16,6 +16,86 @@
   }
 }
 
+body,
+html {
+  font-family: "Mabry Pro", sans-serif;
+}
+
+@font-face {
+  font-family: "Mabry Pro";
+  src: local("Mabry Pro"),
+    url(../assets/fonts/MabryPro-Medium.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Mabry Pro";
+  font-weight: bold;
+  src: local("Mabry Pro"),
+    url(../assets/fonts/MabryPro-Bold.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Mabry Pro";
+  font-weight: bolder;
+  src: local("Mabry Pro"),
+    url(../assets/fonts/MabryPro-Black.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Mabry Pro";
+  font-weight: lighter;
+  src: local("Mabry Pro"),
+    url(../assets/fonts/MabryPro-Light.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Mabry Pro";
+  font-weight: light;
+  src: local("Mabry Pro"),
+    url(../assets/fonts/MabryPro-Regular.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Mabry Pro";
+  font-weight: bold;
+  src: local("Mabry Pro"),
+    url(../assets/fonts/MabryPro-Bold.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Mabry Pro Italic";
+  font-weight: bold;
+  src: local("Mabry Pro"),
+    url(../assets/fonts/MabryPro-BoldItalic.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Mabry Pro Italic";
+  font-weight: bolder;
+  src: local("Mabry Pro"),
+    url(../assets/fonts/MabryPro-BlackItalic.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Mabry Pro Italic";
+  src: local("Mabry Pro"),
+    url(../assets/fonts/MabryPro-MediumItalic.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Mabry Pro Italic";
+  font-weight: lighter;
+  src: local("Mabry Pro"),
+    url(../assets/fonts/MabryPro-LightItalic.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Mabry Pro Italic";
+  font-weight: light;
+  src: local("Mabry Pro"),
+    url(../assets/fonts/MabryPro-Italic.ttf) format("truetype");
+}
+
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
@@ -28,6 +108,10 @@ body {
 
 @layer components {
   .hoverEffect {
-    @apply cursor-pointer hover:bg-gray-200 rounded-full w-[52px] xl:w-auto h-[52px] xl:h-auto xl:p-3;
+    @apply cursor-pointer hover:bg-gray-200 rounded-md w-[52px] xl:w-auto h-[52px] xl:h-auto xl:p-3 transition;
+  }
+
+  .menuHoverEffect {
+    @apply cursor-pointer hover:bg-gray-200 rounded-md w-[52px] xl:w-auto h-[52px] xl:h-auto xl:p-3 hover:scale-110 transition;
   }
 }

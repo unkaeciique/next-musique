@@ -8,15 +8,19 @@ import {
   PiBellSimpleBold,
   PiHeartBold,
 } from "react-icons/pi";
+import "./Sidebar.scss";
 
 export default function Sidebar() {
   return (
-    <div className="hidden sm:flex flex-col p-2 xl:items-start fixed h-full">
-      <div className="hoverEffect p-0 hover:bg-blue-100 xl:px-1">
-        <Image width="50" height="50" src={images.logodark}></Image>
+    <div className="hidden sm:flex flex-col p-3 xl:items-start fixed h-full">
+      <div className="hoverEffect p-2 mt-4 hover:bg-blue-100 xl:px-1">
+        <Image
+          width="200"
+          height="200"
+          src={images.logodark}
+          className="p-1"
+        ></Image>
       </div>
-
-      {/* Menu */}
 
       <div className="mt-4 mb-2.5 xl:items-start">
         <SidebarItem text="Feed" Icon={PiNewspaperClippingBold} active />
@@ -26,19 +30,15 @@ export default function Sidebar() {
         <SidebarItem text="Notifications" Icon={PiBellSimpleBold} />
       </div>
 
-      {/* Button */}
-
-      <button className="bg-blue-400 text-white rounded-full w-56 h-12 font-bold shadow-md hover:brightness-95 text-lg hidden xl:inline">
+      <button className="bg-blue-400 create-button text-white rounded-md w-56 h-12 font-bold shadow-md hover:brightness-95 text-lg hidden xl:inline">
         Create
       </button>
 
-      {/* Mini-Profile */}
-
       <div className="hoverEffect text-gray-700 flex items-center justify-center xl:justify-start mt-auto">
         <img
-          src={images.avatar}
+          src={images.avatar2}
           alt="user-img"
-          className="h-10 w-10 rounded-full xl:mr-2"
+          className="h-10 w-10 rounded-md xl:mr-2"
         />
         <div className="leading-5 hidden xl:inline">
           <h4 className="font-bold">John Doe</h4>
