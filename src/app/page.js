@@ -4,7 +4,6 @@ import Feed from "@/components/Feed/Feed";
 import Widgets from "@/components/Widgets/Widget";
 
 export default async function Home() {
-  const newsArticle = await getNews();
   return (
     <div className="bg-white">
       <head>
@@ -16,30 +15,8 @@ export default async function Home() {
       <main className="flex min-h-screen max-w-7xl mx-auto">
         <Sidebar />
         <Feed />
-        <Widgets newsResults={newsArticle} />
+        <Widgets />
       </main>
     </div>
   );
-}
-
-// export async function getServerSideProps() {
-//   const newsResults = await fetch(
-//     `https://newsapi.org/v2/top-headlines?category=entertainment&q=music&apiKey=855f8cb75d1a405b849c6f78356315a9`
-//   ).then((res) => res.json());
-//   return {
-//     props: {
-//       newsResults,
-//     },
-//   };
-// }
-
-async function getNews() {
-  const res = await fetch(
-    `https://newsapi.org/v2/top-headlines?category=entertainment&q=music&apiKey=855f8cb75d1a405b849c6f78356315a9`
-  );
-  if (!res.ok) {
-    throw new Error("Failed to fetch data");
-  }
-
-  return res.json();
 }
