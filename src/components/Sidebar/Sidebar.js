@@ -3,7 +3,7 @@ import SidebarItem from "./SidebarItem";
 import images from "@/assets/images/images";
 import {
   TbHearts,
-  TbNavigationQuestion,
+  TbNews,
   TbNotification,
   TbDeviceSpeaker,
   TbMessages,
@@ -12,7 +12,7 @@ import "./Sidebar.scss";
 
 export default function Sidebar() {
   return (
-    <div className="hidden sm:flex flex-col p-3 xl:items-start fixed h-full">
+    <div className="hidden sm:flex flex-col p-3 xl:items-start fixed h-full xl:ml-24">
       <div className="hoverEffect p-2 mt-4 hover:bg-blue-100 xl:px-1">
         <Image
           width="200"
@@ -23,7 +23,7 @@ export default function Sidebar() {
       </div>
 
       <div className="mt-4 mb-2.5 xl:items-start">
-        <SidebarItem text="Feed" Icon={TbNavigationQuestion} active />
+        <SidebarItem text="Feed" Icon={TbNews} active />
         <SidebarItem text="Gossips" Icon={TbMessages} />
         <SidebarItem text="Hollerspace" Icon={TbDeviceSpeaker} />
         <SidebarItem text="Liked Posts" Icon={TbHearts} />

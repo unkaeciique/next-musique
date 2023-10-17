@@ -1,0 +1,9 @@
+.post-button {
+    border: 2px black solid;
+    box-shadow: 2px 2px 0px black;
+}
+
+.post-button:active {
+    box-shadow: none;
+    transform: translate(2px, 2px);
+}
