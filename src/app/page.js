@@ -2,6 +2,7 @@ import Image from "next/image";
 import Sidebar from "@/components/Sidebar/Sidebar";
 import Feed from "@/components/Feed/Feed";
 import Widgets from "@/components/Widgets/Widget";
+import CommentModal from "@/components/Comment/CommentModal";
 
 export default async function Home() {
   return (
@@ -16,6 +17,7 @@ export default async function Home() {
         <Sidebar />
         <Feed />
         <Widgets />
+        <CommentModal />
       </main>
     </div>
   );
