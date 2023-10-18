@@ -1,3 +1,5 @@
+"use client";
+
 import { TbSearch } from "react-icons/tb";
 
 export default function Widgets() {

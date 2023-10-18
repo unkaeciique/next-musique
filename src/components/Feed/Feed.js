@@ -1,9 +1,11 @@
+"use client";
+
 import { PiSparkleBold } from "react-icons/pi";
 import InputPost from "./InputPost";
 import Post from "../FeedPost/Post";
 import { collection, onSnapshot, orderBy, query } from "firebase/firestore";
 import { useEffect, useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
+
 import { db } from "../../../firebase";
 
 export default function Feed() {
@@ -30,9 +32,9 @@ export default function Feed() {
         </div>
       </div>
       <InputPost />
-      <AnimatePresence>
+      <div>
         {posts.map((post) => (
-          <motion.div
+          <div
             key={post.id}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -40,9 +42,9 @@ export default function Feed() {
             transition={{ duration: 1 }}
           >
             <Post key={post.id} id={post.id} post={post} />
-          </motion.div>
+          </div>
         ))}
-      </AnimatePresence>
+      </div>
     </div>
   );
 }

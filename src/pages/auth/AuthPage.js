@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState } from "react";
 import "./AuthPage.scss";
 import LoginForm from "../../../src/components/Forms/LoginForm";

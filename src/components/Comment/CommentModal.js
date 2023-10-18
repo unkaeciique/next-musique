@@ -1,3 +1,5 @@
+"use client";
+
 import { useRecoilState } from "recoil";
 import { modalState, postIdState, userState } from "../../atom/atom";
 import { useRouter } from "next/router";

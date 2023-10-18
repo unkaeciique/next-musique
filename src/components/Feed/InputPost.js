@@ -1,3 +1,5 @@
+"use client";
+
 import { TbPhoto, TbMoodSmileBeam, TbCircleX } from "react-icons/tb";
 import images from "@/assets/images/images";
 import "./Feed.scss";
